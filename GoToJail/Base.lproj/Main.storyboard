@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UGZ-4u-yzn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Jail View Controller-->
+        <!--Dear Citizen-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="JailViewController" sceneMemberID="viewController">
@@ -15,11 +16,154 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" editable="NO" text="The NSA politely requests your location." translatesAutoresizingMaskIntoConstraints="NO" id="EL7-Ul-07d">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ORp-e2-6Ga">
+                                        <variation key="widthClass=compact" constant="474"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="368" id="YKK-in-k4k">
+                                        <variation key="widthClass=compact" constant="294"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ORp-e2-6Ga"/>
+                                        <exclude reference="YKK-in-k4k"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ORp-e2-6Ga"/>
+                                        <include reference="YKK-in-k4k"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsq-dg-f83">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HPd-0G-BQV"/>
+                                    <constraint firstAttribute="width" constant="117" id="vGa-tC-6yG"/>
+                                </constraints>
+                                <state key="normal" title="Ummmmmm, Ok">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="HPd-0G-BQV"/>
+                                        <exclude reference="vGa-tC-6yG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="HPd-0G-BQV"/>
+                                        <include reference="vGa-tC-6yG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startViolatingPrivacyButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5l4-qK-e8U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-6V-Db8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JPj-ay-wuU"/>
+                                    <constraint firstAttribute="width" constant="79" id="SwI-3b-I0F"/>
+                                </constraints>
+                                <state key="normal" title="What, NO!!!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JPj-ay-wuU"/>
+                                        <exclude reference="SwI-3b-I0F"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JPj-ay-wuU"/>
+                                        <include reference="SwI-3b-I0F"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="startViolatingPrivacyButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Yt-LM-PzC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wsq-dg-f83" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="5Yf-Tq-x26"/>
+                            <constraint firstItem="EL7-Ul-07d" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="8vK-A7-Crl">
+                                <variation key="widthClass=compact" constant="-64"/>
+                            </constraint>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wsq-dg-f83" secondAttribute="bottom" constant="65" id="ILt-aF-dQ0"/>
+                            <constraint firstItem="mwI-6V-Db8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="QMR-nc-JJX"/>
+                            <constraint firstAttribute="centerX" secondItem="EL7-Ul-07d" secondAttribute="centerX" id="ddw-PI-BL0">
+                                <variation key="widthClass=compact" constant="3"/>
+                            </constraint>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="mwI-6V-Db8" secondAttribute="bottom" constant="65" id="lOc-Jv-c4V"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EL7-Ul-07d"/>
+                                <exclude reference="wsq-dg-f83"/>
+                                <exclude reference="mwI-6V-Db8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8vK-A7-Crl"/>
+                                <exclude reference="ddw-PI-BL0"/>
+                                <exclude reference="QMR-nc-JJX"/>
+                                <exclude reference="5Yf-Tq-x26"/>
+                                <exclude reference="ILt-aF-dQ0"/>
+                                <exclude reference="lOc-Jv-c4V"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EL7-Ul-07d"/>
+                                <include reference="wsq-dg-f83"/>
+                                <include reference="mwI-6V-Db8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8vK-A7-Crl"/>
+                                <include reference="ddw-PI-BL0"/>
+                                <include reference="QMR-nc-JJX"/>
+                                <include reference="5Yf-Tq-x26"/>
+                                <include reference="ILt-aF-dQ0"/>
+                                <include reference="lOc-Jv-c4V"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Dear Citizen" id="D8u-ga-Gos"/>
+                    <connections>
+                        <outlet property="myTextView" destination="EL7-Ul-07d" id="LG1-9w-tUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1197" y="-391"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bVQ-B6-m76">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UGZ-4u-yzn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gZf-1i-eIF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="90B-D7-pL6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEv-AE-FfR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="-391"/>
         </scene>
     </scenes>
 </document>
